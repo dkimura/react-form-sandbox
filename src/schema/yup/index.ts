@@ -1,17 +1,9 @@
-import * as Yup from 'yup'
+import * as y from 'yup'
 
-const task = Yup.object({
-  name: Yup.string().required(),
+export const user = y.object({
+  email: y.string().required(),
+  id: y.number(),
+  name: y.string().required(),
 })
 
-export const taskFormSchema = Yup.object({
-  name: Yup.string(),
-  tasks: Yup.array(task),
-}).optional()
-
-export type TaskFormValues = Yup.InferType<typeof taskFormSchema>
-
-export const value: TaskFormValues = {
-  name: 'hoge',
-  // tasks: [],
-}
+export type User = y.InferType<typeof user>

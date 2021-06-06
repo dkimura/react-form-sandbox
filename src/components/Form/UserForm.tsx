@@ -7,6 +7,11 @@ export const UserForm: React.VFC = () => (
       <Input type="name" />
     </FormControl>
 
+    <FormControl>
+      <FormLabel>Email</FormLabel>
+      <Input type="email" />
+    </FormControl>
+
     <Button type="submit">保存</Button>
   </form>
 )

@@ -1,15 +1,9 @@
 import * as z from 'zod'
 
-const task = z.object({
+export const user = z.object({
+  email: z.string(),
+  id: z.number().optional(),
   name: z.string(),
 })
 
-export const taskFormSchema = z
-  .object({
-    tasks: z.array(task).optional(),
-  })
-  .optional()
-
-export type TaskFormValues = z.infer<typeof taskFormSchema>
-
-export const value: TaskFormValues = undefined
+export type User = z.infer<typeof user>

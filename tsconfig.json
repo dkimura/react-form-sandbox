@@ -72,7 +72,8 @@
     "src/**/*",
     ".storybook/**/*",
     ".eslintrc.js",
-    "prettier.config.js"
+    ".prettierrc.js",
+    "next-env.d.ts"
   ],
   "exclude": ["node_modules"]
 }
